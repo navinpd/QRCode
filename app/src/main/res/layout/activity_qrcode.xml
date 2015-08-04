@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".QRCodeActivity">
+
+    <Button
+        android:id="@+id/qr_scan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignEnd="@+id/qr_read_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/qr_read_button"
+        android:text="Generate QR" />
+
+    <Button
+        android:id="@+id/qr_read_button"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="26dp"
+        android:text="Read QR" />
+
+
+    <EditText
+        android:id="@+id/qr_text"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/qr_scan_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Write your message" />
+
+    <TextView
+        android:id="@+id/scanned"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/qr_read_button"
+        android:text="Scanned Text is:" />
+
+    <TextView
+        android:id="@+id/scanned_text"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/scanned" />
+
+    <ImageView
+        android:id="@+id/qr_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/qr_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+</RelativeLayout>
